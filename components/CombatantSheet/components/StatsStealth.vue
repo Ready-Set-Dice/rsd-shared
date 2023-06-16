@@ -1,0 +1,101 @@
+<template>
+    <span v-if="!!stealth">
+        <span class="font-weight-bold mr-1">Stealth {{ !!dc ? 'DC' : '' }}</span>
+        <v-tooltip
+            top
+            content-class="no-transparancy"
+        >
+            <template v-slot:activator="{ on, attrs }">
+                <span
+                    v-bind="attrs"
+                    v-on="on"
+                    :class="!!stealth.modified ? 'red--text font-weight-medium' : ''"
+                    @click="roll(stealth.value)"    
+                    class="pointer"
+                >
+                    <span v-if="stealth.value >= 0">+</span>
+                    <span class="mr-1">{{!!dc ? stealth.value + 10 : stealth.value}};</span>
+                </span>
+            </template>
+            <span v-if="!!results[`${cidentifier}-stealth`]">
+                    <span class="mr-1">Stealth:</span>
+                    <span class="mr-1">{{results[`${cidentifier}-stealth`].total}}</span>
+                    <span>[{{results[`${cidentifier}-stealth`].roll}}, {{skillValue(stealth.value)}}]</span>
+                </span>
+            <span v-else>Click to roll a Stealth check</span>
+        </v-tooltip>
+        <span 
+            v-for="(sense, index) in senses"
+            :key="'sense-'+sense.name"
+        >
+            <v-menu
+                v-if="!!sense.description && !!sense.title"
+                :close-on-content-click="false"
+                offset-x
+                :nudge-left="250"
+            >
+                <template v-slot:activator="{ on, attrs }">
+                    <span
+                        v-bind="attrs"
+                        v-on="on"
+                        class="text-decoration-underline"
+                    >{{sense.name}}</span>
+                </template>
+                <v-card
+                    elevation="5"
+                    width="500"
+                >
+                    <v-card-title>{{sense.title}}</v-card-title>
+                    <v-card-text v-html="$sanitize(sense.description)"></v-card-text>
+                </v-card>
+            </v-menu>
+            <span v-else>{{sense.name}}</span>
+            <span v-if="index != senses.length - 1">, </span>
+        </span>
+    </span>
+</template>
+
+<script>
+export default {
+    props: {
+        stealth: Object,
+        senses: Array,
+        cidentifier: String,
+        dc: Boolean,
+    },
+    data() {
+        return {
+            results: {
+                stealth: null,
+            }
+        }
+    },
+    methods: {
+        roll(value) {
+            const diceroll = Math.floor(Math.random() * 20 + 1)
+            this.$set(this.results, `${this.cidentifier}-stealth`, {
+                total: diceroll + value,
+                roll: diceroll,
+            })
+
+            let eventhistory = {
+                identifier: this.cidentifier,
+                event: {
+                    short: `Stealth: ${diceroll + value} [${diceroll},${this.skillValue(value)}]`,
+                }
+            }
+
+            if (diceroll == 1) {
+                eventhistory.event.critfail = true
+            } else if (diceroll == 20) {
+                eventhistory.event.critsuccess = true
+            }
+            
+            this.$rsd.eventhistory.push(eventhistory)
+        },
+        skillValue(value) {
+            return value >= 0 ? `+${value}` : value
+        }
+    },
+}
+</script>
