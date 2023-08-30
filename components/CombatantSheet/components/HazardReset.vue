@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import BaseItemNode from '@/../../shared/components/base/BaseItemNode'
+import BaseItemNode from '@/../../.shared/components/base/BaseItemNode'
 
 export default {
     components: {

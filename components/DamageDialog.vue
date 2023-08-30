@@ -34,7 +34,7 @@
 
 <script>
 import { isGM } from '@/services'
-import BaseDialog from '@/../../shared/components/base/BaseDialog/BaseDialog'
+import BaseDialog from '@/../../.shared/components/base/BaseDialog/BaseDialog'
 
 export default {
     components: {

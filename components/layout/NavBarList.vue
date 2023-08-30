@@ -196,7 +196,7 @@
 </template>
 
 <script>
-import NoMobileTransition from '@/../../shared/components/layout/NoMobileTransition'
+import NoMobileTransition from '@/../../.shared/components/layout/NoMobileTransition'
 
 export default {
     components: {
