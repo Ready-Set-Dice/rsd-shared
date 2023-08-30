@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import SpellSheetDialog from '@/../../.shared/components/SpellSheet/SpellSheetDialog'
+import SpellSheetDialog from '@root/.shared/components/SpellSheet/SpellSheetDialog'
 
 export default {
     data() {

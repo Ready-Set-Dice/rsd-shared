@@ -1,7 +1,7 @@
 import { CampaignService, CombatService, AncestryService, BackgroundService, ClassService, isGM} from '@/services'
 import { DefaultController } from './DefaultController'
 
-import auth from '@/../../.shared/services/AuthService'
+import auth from '@root/.shared/services/AuthService'
 
 const ERRCODES = {
     0: 'L00', // Error: cid [${cid}] was not valid or empty.

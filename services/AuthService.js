@@ -1,6 +1,6 @@
 import rtdb from '@/rtdb'
 import { getAuth } from 'firebase/auth'
-import store from '@/../../.shared/store/store'
+import store from '@root/.shared/store/store'
 // import services from '@/services'
 
 // const getFBAuth = () => import('@firebase/auth')

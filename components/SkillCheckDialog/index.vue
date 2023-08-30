@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import GenericDialog from '@/../../.shared/components/GenericDialog/index'
+import GenericDialog from '@root/.shared/components/GenericDialog/index'
 
 export default {
     components: {

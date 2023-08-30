@@ -25,9 +25,9 @@
 </template>
 
 <script>
-import BaseItemNode from '@/../../.shared/components/base/BaseItemNode'
-import BaseTraitChip from '@/../../.shared/components/base/BaseTraitChip'
-import BaseTraitText from '@/../../.shared/components/base/BaseTraitText'
+import BaseItemNode from '@root/.shared/components/base/BaseItemNode'
+import BaseTraitChip from '@root/.shared/components/base/BaseTraitChip'
+import BaseTraitText from '@root/.shared/components/base/BaseTraitText'
 
 export default {
     components: {

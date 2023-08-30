@@ -1,7 +1,7 @@
 import { CombatService, CampaignService, isGM} from '@/services'
 import { DefaultController } from './DefaultController'
 
-import auth from '@/../../.shared/services/AuthService'
+import auth from '@root/.shared/services/AuthService'
 
 const ERRCODES = {
     0: 'M00', // Error: Not a GM.

@@ -97,7 +97,7 @@
 </template>
 
 <script>
-import BaseTraitChip from '@/../../.shared/components/base/BaseTraitChip'
+import BaseTraitChip from '@root/.shared/components/base/BaseTraitChip'
 
 import StatsPerception from './components/StatsPerception.vue'
 import StatsLanguages from './components/StatsLanguages.vue'

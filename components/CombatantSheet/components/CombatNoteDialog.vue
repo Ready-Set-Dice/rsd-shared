@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import BaseDialog from '@/../../.shared/components/base/BaseDialog/BaseDialog'
+import BaseDialog from '@root/.shared/components/base/BaseDialog/BaseDialog'
 
 export default {
     components: {
