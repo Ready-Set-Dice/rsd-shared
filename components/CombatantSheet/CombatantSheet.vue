@@ -229,7 +229,7 @@
 <script>
 import { isGM  } from '@/services'
 
-import BaseTraitChip from '@/../../shared/components/base/BaseTraitChip'
+import BaseTraitChip from '@/../../.shared/components/base/BaseTraitChip'
 
 import CombatNote from './components/CombatNote'
 

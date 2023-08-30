@@ -1,5 +1,5 @@
 const EventEmitter = require('events')
-import store from '@/../../shared/store/store'
+import store from '@/../../.shared/store/store'
 
 export class DefaultController extends EventEmitter {
     constructor(isDev) {

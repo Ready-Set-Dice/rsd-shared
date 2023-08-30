@@ -136,8 +136,8 @@
 </template>
 
 <script>
-import ConditionIndicator from '@/../../shared/components/ConditionIndicator'
-import CombatantSheet from '@/../../shared/components/CombatantSheet/CombatantSheet'
+import ConditionIndicator from '@/../../.shared/components/ConditionIndicator'
+import CombatantSheet from '@/../../.shared/components/CombatantSheet/CombatantSheet'
 
 export default {
     components: {

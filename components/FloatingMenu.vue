@@ -44,7 +44,7 @@
 </template>
 
 <script>
-import GameIcons from '@/../../shared/plugins/IconMixin'
+import GameIcons from '@/../../.shared/plugins/IconMixin'
 
 export default {
     mixins: [

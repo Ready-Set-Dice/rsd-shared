@@ -105,7 +105,7 @@
 </template>
 
 <script>
-import auth from '@/../../shared/services/AuthService'
+import auth from '@/../../.shared/services/AuthService'
 
 export default {
     props: {
