@@ -129,7 +129,7 @@
 
 <script>
 import { isGM  } from '@/services'
-import ConditionIndicator from '@/../../.shared/components/ConditionIndicator'
+import ConditionIndicator from '@root/.shared/components/ConditionIndicator'
 
 export default {
     components: {

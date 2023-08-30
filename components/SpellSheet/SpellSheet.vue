@@ -84,8 +84,8 @@
 <script>
 import { SpellService } from '@/services'
 
-import BaseTraitChip from '@/../../.shared/components/base/BaseTraitChip'
-import BaseItemNode from '@/../../.shared/components/base/BaseItemNode'
+import BaseTraitChip from '@root/.shared/components/base/BaseTraitChip'
+import BaseItemNode from '@root/.shared/components/base/BaseItemNode'
 
 import StatsTraditions from './components/StatsTraditions.vue'
 import StatsCast from './components/StatsCast.vue'

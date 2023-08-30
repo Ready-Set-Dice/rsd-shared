@@ -46,7 +46,7 @@
 
 <script>
 
-import BaseTraitChip from '@/../../.shared/components/base/BaseTraitChip'
+import BaseTraitChip from '@root/.shared/components/base/BaseTraitChip'
 
 export default {
     components: {

@@ -416,7 +416,7 @@
 </template>
 
 <script>
-import BaseTraitChip from '@/../../.shared/components/base/BaseTraitChip'
+import BaseTraitChip from '@root/.shared/components/base/BaseTraitChip'
 import Picker from 'vue-wheel-picker';
 
 export default {

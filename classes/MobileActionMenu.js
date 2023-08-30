@@ -1,5 +1,5 @@
 const EventEmitter = require('events')
-import store from '@/../../.shared/store/store'
+import store from '@root/.shared/store/store'
 import { $rsd } from '@/plugins/RSDPlugin'
 
 export class MobileActionMenu extends EventEmitter {
