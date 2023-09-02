@@ -34,7 +34,7 @@ export default {
                     recentCondition: [
                         {type: 'frightened', reduce: true, value: 1},
                         {type: 'sickened', value: 1, duration: 5},
-                        {type: 'flat-footed'}
+                        {type: 'off-guard'}
                     ],
                     recentDmgTypes: [
                         {type: 'slashing', value: 5},

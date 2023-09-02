@@ -522,7 +522,7 @@ export class ConditionsController extends DefaultController {
         if (type == 'custom' || type == 'frightened' || type == 'blinded' || type == 'clumsy' ||
             type == 'concealed' || type == 'confused' || type == 'controlled' || type == 'dazzled' ||
             type == 'deafened' || type == 'drained' || type == 'encumbered' || type == 'enfeebled' ||
-            type == 'fascinated' || type == 'flat-footed' || type == 'fleeing' || type == 'friendly' ||
+            type == 'fascinated' || type == 'off-guard' || type == 'fleeing' || type == 'friendly' ||
             type == 'grabbed' || type == 'helpful' || type == 'hidden' || type == 'immobilized' ||
             type == 'indifferent' || type == 'invisible' || type == 'paralyzed' || type == 'persistent damage' ||
             type == 'quickened' || type == 'sickened' || type == 'slowed' || type == 'stunned' ||
