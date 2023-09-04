@@ -118,7 +118,7 @@ class FoundryParser {
     }
     
     // Check
-    removeCheckString(description) {
+    static removeCheckString(description) {
         let matches = description.matchAll(checkRegex);
         let iterator = matches.next();
     
