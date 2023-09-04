@@ -26,7 +26,7 @@ class FoundryParser {
         this.#RE_EN = STATIC_RE_EN;
     }
 
-    static parseItem(item) {
+    parseItem(item) {
         if (!!this.hasDescription(item)) {
             if (!!item.system.description.value.includes('@Localize')) {
                 const localize = this.getEN();
@@ -54,7 +54,7 @@ class FoundryParser {
         }
     }
 
-    static regexRemove(description) {
+    regexRemove(description) {
         if (!!description) {
             if (!!description.includes('@Template')) {
                 description = this.removeTemplateString(description);
@@ -86,12 +86,12 @@ class FoundryParser {
         return description
     }
    
-    static replaceRegex(regex, replace, description) {
+    replaceRegex(regex, replace, description) {
         return description.replace(regex, replace)
     }
     
     // Template
-    static removeTemplateString(description) {
+    removeTemplateString(description) {
         let matches = description.matchAll(TEMPLATE_REGEX);
         let iterator = matches.next();
     
@@ -118,7 +118,7 @@ class FoundryParser {
     }
     
     // Check
-    static removeCheckString(description) {
+    removeCheckString(description) {
         let matches = description.matchAll(checkRegex);
         let iterator = matches.next();
     
@@ -154,7 +154,7 @@ class FoundryParser {
     }
 
     // DC
-    static convertDCString(description) {
+    convertDCString(description) {
         let matches = description.matchAll(DC_REGEX);
         let iterator = matches.next();
     
@@ -174,14 +174,14 @@ class FoundryParser {
         return description
     }
 
-    static hasDescription(item) {
+    hasDescription(item) {
         return !!item && !!item.system && !!item.system.description && !!item.system.description.value && item.system.description.value.length > 0 
     }
 
-    static getEN() {
+    getEN() {
         return this.#EN;
     }
-    static getRE_EN() {
+    getRE_EN() {
         return this.#RE_EN;
     }
 }
