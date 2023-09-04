@@ -113,7 +113,12 @@ class FoundryParser {
             description = description.substr(0, replaceIndex) + replacementText + description.substr(replaceIndex + iterator.value[0].length, description.length - (iterator.value.index + iterator.value[0].length));
             iterator = matches.next();
         }
-        require('@/.shared/classes/FoundryParser');
+
+        return description
+    }
+    
+    // Check
+    removeCheckString(description) {
         let matches = description.matchAll(checkRegex);
         let iterator = matches.next();
     
