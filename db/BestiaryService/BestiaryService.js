@@ -689,7 +689,7 @@ class BestiaryService extends EventEmitter {
             return customJSON
         }
     
-        const speedSplit = !!customJSON && !!customJSON.speed ? customJSON.speed.split(',') : []
+        const speedSplit = !!customJSON?.speed?.split ? customJSON.speed.split(',') : []
         let movespeed = 25
         let otherSpeeds = []
         
